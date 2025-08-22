@@ -47,7 +47,7 @@ export default function HomePage({ data }: HomePageProps) {
             What People Say About Dhan Rakshak
           </h1>
           <p className="text-xl text-stone-100 max-w-2xl font-mono mx-auto">
-            Discover authentic experiences from our valued users
+            We value the experiencess of our users.
           </p>
         </div>
 
