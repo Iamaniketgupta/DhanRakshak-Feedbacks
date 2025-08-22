@@ -20,6 +20,7 @@ interface HomePageProps {
 }
 
 export default function HomePage({ data }: HomePageProps) {
+  // console.log(data)
   const renderStars = (rating: number) => {
     return (
       <div className="flex">
