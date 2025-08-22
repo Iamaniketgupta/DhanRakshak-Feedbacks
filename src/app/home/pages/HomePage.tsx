@@ -47,7 +47,7 @@ export default function HomePage({ data }: HomePageProps) {
             What People Say About Dhan Rakshak
           </h1>
           <p className="text-xl text-stone-100 max-w-2xl font-mono mx-auto">
-            We value the experiencess of our users.
+            We value the experiences of our users.
           </p>
         </div>
 
@@ -93,7 +93,7 @@ export default function HomePage({ data }: HomePageProps) {
                 </div>
                 <div className="relative">
                   <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-amber-400 to-amber-600 rounded-full"></div>
-                 <ReadMore text={review.feedback} maxChars={100}/>
+                  <ReadMore text={review.feedback} maxChars={100} />
                 </div>
               </div>
             </div>
