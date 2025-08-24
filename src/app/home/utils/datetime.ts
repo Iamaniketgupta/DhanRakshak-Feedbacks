@@ -5,7 +5,9 @@ export const formatDate = (dateString: string) => {
   const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
   const thatDay = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
 
-  const diffInDays = Math.floor((today - thatDay) / (1000 * 60 * 60 * 24));
+  let diffInDays = Math.floor((today - thatDay) / (1000 * 60 * 60 * 24));
+
+  if (diffInDays < 0) diffInDays = 0;
 
   if (diffInDays === 0) {
     return "Today";
