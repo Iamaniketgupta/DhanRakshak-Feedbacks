@@ -2,17 +2,15 @@ export const formatDate = (dateString: string) => {
   const date = new Date(dateString);
   const now = new Date();
 
-  // strip time (set to midnight)
-  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  const thatDay = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  const thatDay = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
 
-  const diffInMs = today.getTime() - thatDay.getTime();
-  const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+  const diffInDays = Math.floor((today - thatDay) / (1000 * 60 * 60 * 24));
 
   if (diffInDays === 0) {
     return "Today";
   } else if (diffInDays === 1) {
-    return "Yesterday"; 
+    return "Yesterday";
   } else if (diffInDays < 7) {
     return `${diffInDays} days ago`;
   } else if (diffInDays < 30) {
