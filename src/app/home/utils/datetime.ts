@@ -12,7 +12,7 @@ export const formatDate = (dateString: string) => {
   if (diffInDays === 0) {
     return "Today";
   } else if (diffInDays === 1) {
-    return "Yesterday";
+    return "Yesterday"; 
   } else if (diffInDays < 7) {
     return `${diffInDays} days ago`;
   } else if (diffInDays < 30) {

@@ -1,3 +1,4 @@
+"use server"
 import axiosInstance from "@/apis/axiosInstance";
 
 export const getAllFeedbacks = async () => {
